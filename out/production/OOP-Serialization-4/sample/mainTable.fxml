@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" style="-fx-background-color: #F0F8FD;" minWidth="-Infinity" prefHeight="556.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MainController">
+    <children>
+        <TableView fx:id="tableEditions" layoutX="411.0" layoutY="10.0" onMouseClicked="#showRow" prefHeight="320.0" prefWidth="598.0">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="118.0" resizable="false" text="Name" />
+                <TableColumn fx:id="emailColumn" prefWidth="136.0" resizable="false" text="Email" />
+                <TableColumn fx:id="remoteWorkColumn" minWidth="0.0" prefWidth="134.0" resizable="false" text="RemoteWork" />
+                <TableColumn fx:id="qualityColumn" prefWidth="90.0" resizable="false" text="Quality" />
+                <TableColumn fx:id="dateColumn" prefWidth="118.0" text="Publishing Date" />
+            </columns>
+        </TableView>
+        <Button fx:id="addButton" layoutX="53.0" layoutY="419.0" mnemonicParsing="false" style="-fx-background-color: #CEE3F6;"  onAction="#createNewRec" prefHeight="18.0"  prefWidth="60.0" text="Add" />
+        <Button fx:id="saveButton" layoutX="180.0" layoutY="419.0" mnemonicParsing="false"  style="-fx-background-color: #CEE3F6;" onAction="#saveNewRec" prefHeight="25.0" prefWidth="60.0" text="Save" />
+        <Button fx:id="deleteButton" layoutX="307.0" layoutY="419.0" mnemonicParsing="false" style="-fx-background-color: #CEE3F6;" onAction="#deleteRow" prefHeight="25.0" prefWidth="60.0" text="Delete" />
+        <ComboBox fx:id="classComboBox" layoutX="113.0" layoutY="21.0" style="-fx-background-color: #CEE3F6;" onAction="#generateFields" prefHeight="25.0" prefWidth="194.0" />
+        <TextField fx:id="emailTextField" layoutX="200.0" layoutY="97.0" prefHeight="25.0" prefWidth="182.0" />
+        <TextField fx:id="nameTextField" layoutX="200.0" layoutY="60.0" prefHeight="25.0" prefWidth="182.0" />
+        <CheckBox fx:id="remoteWorkCheckBox" layoutX="200.0" layoutY="137.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="77.0" />
+        <Label fx:id="nameLabel" layoutX="31.0" layoutY="64.0" prefHeight="17.0" prefWidth="119.0" text="Name" />
+        <Label fx:id="emailLabel" layoutX="31.0" layoutY="101.0" prefHeight="17.0" prefWidth="119.0" text="Email" />
+        <Label fx:id="remoteWorkLabel" layoutX="31.0" layoutY="137.0" prefHeight="17.0" prefWidth="119.0" text="Remote Work" />
+        <Separator layoutX="15.0" layoutY="238.0" prefHeight="17.0" prefWidth="371.0" />
+        <Label fx:id="startWorkDateLabel" layoutX="31.0" layoutY="167.0" prefHeight="27.0" prefWidth="119.0" text="Date of start work" />
+        <DatePicker fx:id="startWorkDatePicker" editable="false" layoutX="200.0" layoutY="163.0" prefHeight="10.0" prefWidth="182.0" />
+        <Label fx:id="manageLabel" layoutX="31.0" layoutY="270.0" prefHeight="17.0" prefWidth="119.0" text="Age Category" visible="false" />
+        <ComboBox fx:id="manageComboBox" layoutX="200.0" style="-fx-background-color: #CEE3F6;" layoutY="266.0" prefHeight="25.0" prefWidth="182.0" visible="false" />
+        <Label fx:id="typeLabel" layoutX="31.0" layoutY="270.0" prefHeight="17.0" prefWidth="119.0" text="Programming Type" visible="false" />
+        <ComboBox fx:id="typeComboBox" layoutX="200.0" layoutY="266.0"  style="-fx-background-color: #CEE3F6;" prefHeight="25.0" prefWidth="182.0" visible="false" />
+        <Label fx:id="educationLabel" layoutX="31.0" layoutY="304.0" prefHeight="17.0" prefWidth="119.0" text="Higher Education" visible="false" />
+        <CheckBox fx:id="educationCheckBox" layoutX="202.0" layoutY="304.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="77.0" visible="false" />
+        <Label fx:id="authorLabel" layoutX="31.0" layoutY="270.0" prefHeight="17.0" prefWidth="119.0" text="Author" visible="false" />
+        <TextField fx:id="authorTextField" layoutX="200.0" layoutY="266.0" prefHeight="25.0" prefWidth="182.0" visible="false" />
+        <Label fx:id="pageNumLabel" layoutX="31.0" layoutY="304.0" prefHeight="17.0" prefWidth="119.0" text="Page Number" visible="false" />
+        <TextField fx:id="pageNumTextField" layoutX="200.0" layoutY="300.0" prefHeight="25.0" prefWidth="60.0" visible="false" />
+        <Label fx:id="officeLabel" layoutX="31.0" layoutY="333.0" prefHeight="17.0" prefWidth="119.0" text="Office" visible="false" />
+        <TextField fx:id="officeTextField" layoutX="200.0" layoutY="329.0" prefHeight="25.0" prefWidth="60.0" visible="false" />
+        <Label fx:id="sphereLabel" layoutX="31.0" layoutY="273.0" prefHeight="17.0" prefWidth="119.0" text="Sphere" visible="false" />
+        <ComboBox fx:id="sphereComboBox" layoutX="200.0" layoutY="266.0" style="-fx-background-color: #CEE3F6;" prefHeight="17.0" prefWidth="182.0" visible="false" />
+        <ComboBox fx:id="DesignerComboBox" layoutX="200.0" layoutY="266.0" style="-fx-background-color: #CEE3F6;" prefHeight="17.0" prefWidth="182.0" visible="false" />
+        <ComboBox fx:id="qualityComboBox" layoutX="200.0" layoutY="359.0" style="-fx-background-color: #CEE3F6;" prefHeight="17.0" prefWidth="182.0" visible="false" />
+        <Label fx:id="qualityLabel" layoutX="31.0" layoutY="364.0" prefHeight="17.0" prefWidth="119.0" text="Quality" visible="false" />
+        <Button fx:id="serializeButton" layoutX="542.0" layoutY="476.0" style="-fx-background-color: #CEE3F6;" mnemonicParsing="false" onAction="#serializeList" prefHeight="25.0" prefWidth="119.0" text="Serialize" />
+        <Button fx:id="deserializeButton" layoutX="731.0" layoutY="476.0" style="-fx-background-color: #CEE3F6;" mnemonicParsing="false" onAction="#deserializeList" prefHeight="25.0" prefWidth="119.0" text="Deserialize" />
+        <Separator layoutX="394.0" layoutY="12.0" orientation="VERTICAL" prefHeight="535.0" prefWidth="3.0" />
+        <TextField fx:id="keyTextField" layoutX="700.0" layoutY="403.0" prefHeight="25.0" prefWidth="182.0" />
+        <Label fx:id="keyLabel" layoutX="581.0" layoutY="407.0" prefHeight="17.0" prefWidth="119.0" text="Key" />
+        <Label fx:id="plugLabel" layoutX="581.0" layoutY="364.0" prefHeight="17.0" prefWidth="119.0" text="Plugin" />
+        <ComboBox fx:id="plugComboBox" layoutX="700.0" layoutY="360.0" style="-fx-background-color: #CEE3F6;" onMouseClicked="#onClickPlugin" prefHeight="25.0" prefWidth="182.0" />
+
+    </children>
+</AnchorPane>
